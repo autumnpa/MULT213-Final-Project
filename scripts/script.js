@@ -10,16 +10,14 @@ const quotes = document.getElementById("quote");
 
 function fetchJSON(url) {
   // Fetches data from posts
-  fetch('https://type.fit/api/quotes')
+  fetch('https://api.paperquotes.com/apiv1/quotes/?tags=motivation', { headers: { Authorization: "Token 06c446dfd2ab6605cba53a1ca7d52c789681ad55" } })
     .then(response => response.json())
     .then(data => {
       let html = "";
 
-      // Copied from my previous promise exercise
-      // loops through the posts data and then prints html list
       for (let i = 0; i < data.length; i++) {
         // creates a list of ids for posts
-        html += `<p>${data[i].id}</p>`;
+        html += `<p>${data[i].quote}</p>`;
       }
       console.log(data);
 
@@ -32,7 +30,7 @@ function fetchJSON(url) {
     })
     .catch(error => console.error('Error:', error))
 }
-fetchJSON('https://type.fit/api/quotes')
+fetchJSON('https://api.paperquotes.com/apiv1/quotes/?tags=motivation')
 // quotes.innerHTML = html;
 
 
