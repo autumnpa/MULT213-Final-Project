@@ -1,1 +1,21 @@
 /* Main stylesheet for this project */
+
+.popup {
+    background-color: aqua;
+    color: blue;
+    width: 100%;
+    text-align: center;
+}
+
+.popup-btn {
+    padding: 50px;
+    display: block;
+}
+
+.popup-btn-left {
+    display: inline-block;
+}
+
+.popup-btn-right {
+display: inline-block;
+}
