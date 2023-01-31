@@ -25,4 +25,12 @@ body {
     cursor: pointer;
     float: left;
     width: 50%;
+    background-color: aqua;
+    color: blue;
+    border: none;
+    outline: none;
+    background-color: aqua;
+    border: none;
+    border-top: 1px solid blue;
+    border-left: 1px solid blue;
 }
