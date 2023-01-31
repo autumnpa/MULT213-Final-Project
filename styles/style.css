@@ -1,1 +1,28 @@
 /* Main stylesheet for this project */
+
+body {
+    padding: 40px;
+    max-width: 460px;
+    margin: auto;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-card {
+    border-radius: 0.75rem;
+    background-color: #fff;
+    overflow: hidden;
+    background-color: aqua;
+    color: blue;
+    width: 100%;
+    text-align: center;
+}
+
+.popup-btns button {
+    padding: 20px 12px;
+    cursor: pointer;
+    float: left;
+    width: 50%;
+}
