@@ -3,12 +3,6 @@
 
 const quotes = document.getElementById("quote");
 
-function displayResult(result) {
-  console.log(result);
-}
-
-multiply(7, 11, displayResult);
-
 function fetchJSON(url, callback) {
   // Fetches data from quote API - We had to generate an authorization key in order to use this as well.
   fetch('https://api.paperquotes.com/apiv1/quotes/?tags=motivation', { headers: { Authorization: "Token 06c446dfd2ab6605cba53a1ca7d52c789681ad55" } })
