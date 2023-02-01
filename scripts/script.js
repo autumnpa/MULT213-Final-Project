@@ -1,38 +1,32 @@
 // JavaScript for MULT213 A2
 
 
-// fetch('https://zenquotes.io/api/quotes/keyword=anxiety')
-//   .then(response => response.json())
-//   .catch(error => console.error('Error:', error))
-
-
 const quotes = document.getElementById("quote");
 
-function fetchJSON(url) {
-  // Fetches data from posts
-  fetch('https://type.fit/api/quotes')
+function displayResult(result) {
+  console.log(result);
+}
+
+multiply(7, 11, displayResult);
+
+function fetchJSON(url, callback) {
+  // Fetches data from quote API - We had to generate an authorization key in order to use this as well.
+  fetch('https://api.paperquotes.com/apiv1/quotes/?tags=motivation', { headers: { Authorization: "Token 06c446dfd2ab6605cba53a1ca7d52c789681ad55" } })
     .then(response => response.json())
     .then(data => {
-      let html = "";
-
-      // Copied from my previous promise exercise
-      // loops through the posts data and then prints html list
-      for (let i = 0; i < data.length; i++) {
-        // creates a list of ids for posts
-        html += `<p>${data[i].id}</p>`;
-      }
-      console.log(data);
-
-      if (data.length <= 0)
-        html += `<p>No quotes exist.</p>`
-
-      // outputs in div we labeled as id=posts in index.html
-      const quotes = document.getElementById("quote");
-      quotes.innerHTML += html;
+      callback(data);
     })
     .catch(error => console.error('Error:', error))
 }
-fetchJSON('https://type.fit/api/quotes')
+
+function displayData(data) {
+  console.log(data);
+}
+
+fetchJSON('https://api.paperquotes.com/apiv1/quotes/?tags=motivation', displayData);
+
+// const quotes = document.getElementById("quote");
+// quotes.innerHTML += html;
 // quotes.innerHTML = html;
 
 
