@@ -18,5 +18,4 @@ function displayData(data) {
   quote.innerHTML += html;
   console.log(data);
 }
-
 fetchJSON('https://api.paperquotes.com/apiv1/quotes/?tags=motivation', displayData);
