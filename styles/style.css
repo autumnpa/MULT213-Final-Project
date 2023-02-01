@@ -2,35 +2,71 @@
 
 body {
     padding: 40px;
-    max-width: 460px;
+    max-width: 500px;
     margin: auto;
     min-height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
+    background-color: lightcoral;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+/* Card styling */
 .popup-card {
     border-radius: 0.75rem;
     background-color: #fff;
     overflow: hidden;
-    background-color: aqua;
+}
+
+.popup-info {
+    padding: 40px 40px 30px 40px;
+}
+
+
+/* Text/font styling */
+h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+    font-weight: 650;
+    text-decoration: underline;
+}
+
+p {
+    font-size: 16px;
+    font-weight: 350;
+}
+
+h3,
+p {
     color: blue;
-    width: 100%;
     text-align: center;
 }
 
+
+/* Button styling */
 .popup-btns button {
-    padding: 20px 12px;
+    color: blue;
+    background-color: white;
+    font-size: 16px;
+    font-weight: 500;
+    outline: none;
+    border: none;
+    border-top: 1px solid rgb(197, 199, 201);
+    border-left: 1px solid rgb(197, 199, 201);
+    padding: 20px 16px;
     cursor: pointer;
     float: left;
     width: 50%;
-    background-color: aqua;
-    color: blue;
-    border: none;
-    outline: none;
-    background-color: aqua;
-    border: none;
-    border-top: 1px solid blue;
-    border-left: 1px solid blue;
+}
+
+.popup-btns button:not(:last-child) {
+    border-left: none;
+}
+
+.popup-btns button:hover {
+    background-color: rgb(240, 224, 224);
+}
+
+.popup-btns button:active {
+    background-color: rgb(235, 217, 217);
 }
