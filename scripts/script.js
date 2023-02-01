@@ -14,33 +14,11 @@ function fetchJSON(url, callback) {
 }
 
 function displayData(data) {
+  let html = "";
+  html += `<p>${data}</p>`
+  const quote = document.getElementById("quote");
+  quote.innerHTML += html;
   console.log(data);
 }
 
 fetchJSON('https://api.paperquotes.com/apiv1/quotes/?tags=motivation', displayData);
-
-// const quotes = document.getElementById("quote");
-// quotes.innerHTML += html;
-// quotes.innerHTML = html;
-
-
-// function fetchJSON(url) {
-//   fetch('https://zenquotes.io/api/quotes')
-//     .then(response => response.json())
-//     .then(data => {
-//       let html = "";
-
-//       for (let i = 0; i < data.length; i++) {
-//         html += `<li>${data[i].id}</li>`;
-//       }
-
-//       if (data.length <= 0)
-//         html += `<p>No quotes exist.</p>`
-
-//       const quotes = document.getElementById("quote");
-//       quotes.innerHTML += html;
-//     })
-//     .catch(error => console.error('Error:', error))
-// }
-// fetchJSON('https://zenquotes.io/api/quotes')
-// console.log('https://zenquotes.io/api/quotes');
