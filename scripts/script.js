@@ -1,5 +1,3 @@
-// JavaScript for MULT213 A2
-
 
 const quotes = document.getElementById("quote");
 
@@ -20,5 +18,3 @@ function displayData(data) {
   quote.innerHTML += html;
   console.log(data);
 }
-
-fetchJSON('https://api.paperquotes.com/apiv1/quotes/?tags=motivation', displayData);
