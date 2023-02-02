@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" id="background">
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -17,7 +17,7 @@
 <body>
     <div class="container">
         <header>
-            <h1>Affirmations</h1>
+            <h1 id="title">Affirmations</h1>
 
         </header>
 
@@ -45,10 +45,19 @@
                         <input type="checkbox">
                         <span class="slider" onclick="backgroundColour()"></span>
                     </label>
+                    <p>
+                        <select name="font_menu">
+                            <option value="select">- Select Title Font -</option>
+                            <option value="Font1" onclick="fontChange1()">Font 1</option>
+                            <option value="Font2" onclick="fontChange2()">Font 2</option>
+                            <option value="Font3" onclick="fontChange3()">Font 3</option>
+                        </select>
+                    </p>
                 </div>
 
             </div>
         </div>
+
         <!-- NEW ROW -->
         <footer>
             <!-- row that holds footer info -->

@@ -5,7 +5,11 @@ let html = "";
 // Functions are fine - dont alter too much right now!!!!
 function fetchJSON(url, callback) {
   // Fetches data from quote API - We had to generate an authorization key in order to use this as well.
-  fetch('https://api.paperquotes.com/apiv1/quotes/?tags=motivation', { headers: { Authorization: "Token 06c446dfd2ab6605cba53a1ca7d52c789681ad55" } })
+  fetch('https://api.paperquotes.com/apiv1/quotes/?tags=motivation', {
+      headers: {
+        Authorization: "Token 06c446dfd2ab6605cba53a1ca7d52c789681ad55"
+      }
+    })
     .then(response => response.json())
     .then(data => {
       callback(data.results[0].quote);
@@ -22,7 +26,69 @@ function displayQuote(individualQuote) {
 }
 fetchJSON('https://api.paperquotes.com/apiv1/quotes/?tags=motivation', displayQuote);
 
+//this function will be used to get access to the unsplash image API
+
+const numItemsToGenerate = 1;
+
+function renderItem() {
+  fetch(`https://source.unsplash.com/1600x900/?minimal`, {
+      headers: {
+        Authorization: "Client-ID 3dG7ZdUYykMRP-stnsf0e6smaF9HO9VmYIWBAdbqXuM"
+      }
+    })
+    .
+  then((response) => {
+    let item = document.createElement('div');
+    item.classList.add('item');
+    item.innerHTML = `
+      <img class="beach-image" src="${response.url}" alt="beach image"/>
+    `
+    document.body.appendChild(item);
+  })
+}
+for (let i = 0; i < numItemsToGenerate; i++) {
+  renderItem();
+}
+
+
+
+
+
+
+// function fetchBackgroundJSON() {
+//   fetch('https://api.unsplash.com/photos/random/?client_id=3dG7ZdUYykMRP-stnsf0e6smaF9HO9VmYIWBAdbqXuM', {
+//       headers: {
+//         Authorization: "Client-ID 3dG7ZdUYykMRP-stnsf0e6smaF9HO9VmYIWBAdbqXuM"
+//       }
+//     })
+//     .then(response => response.json())
+//     .then(data => { console.log(data)
+
+//     })
+//     .catch(imgError => console.error('Error:', imgError))
+// }
+// fetchBackgroundJSON();
+
+
+
+function displayImages(backgroundImage) {
+  document.getElementById("body").style.backgroundImage = ``
+}
+
+
 //this function is going to give the users the option to change the background color
-function backgroundColour(){
+function backgroundColour() {
   document.body.style.backgroundColor = "red";
+}
+
+function fontChange1() {
+  document.getElementById("title").style.fontFamily = "Impact, Charcoal, sans-serif";
+}
+
+function fontChange2() {
+  document.getElementById("title").style.fontFamily = "Charcoal, sans-serif";
+}
+
+function fontChange3() {
+  document.getElementById("title").style.fontFamily = "Lucida Sans, Lucida Sans Regular, Lucida Grande, Lucida Sans Unicode, Geneva, Verdana, sans-serif";
 }
