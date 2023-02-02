@@ -6,7 +6,7 @@
     <title>Final Project - A & M</title>
     <script src="scripts/script.js"></script>
     <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/autumn.css">
+    <!-- <link rel="stylesheet" href="styles/autumn.css"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Clicker+Script&family=Manrope&display=swap" rel="stylesheet">
@@ -40,11 +40,14 @@
             <!-- NEW ROW -->
             <div class="row-buttons">
                 <!-- Row that holds buttons -->
+                <div class="column">
                 <div class="toggle-btn">
                     <label class="switch">
                         <input type="checkbox">
                         <span class="slider" onclick="backgroundColour()"></span>
                     </label>
+                </div>
+                <div class="column">
                     <p>
                         <select name="font_menu">
                             <option value="select">- Select Title Font -</option>
@@ -54,10 +57,12 @@
                         </select>
                     </p>
                 </div>
-
+                <div class="column">
+                    <button onclick="renderItem()">Change Background</button>
+                </div>
+                </div>
             </div>
         </div>
-
         <!-- NEW ROW -->
         <footer>
             <!-- row that holds footer info -->
