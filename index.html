@@ -37,17 +37,19 @@
                     </div>
                 </div>
             </div>
-            <!-- NEW ROW -->
-            <div class="row-buttons">
-                <!-- Row that holds buttons -->
-                <div class="column">
+        </div>
+        <!-- NEW ROW -->
+        <div class="row-buttons">
+            <!-- Row that holds buttons -->
+            <div class="button-items">
                 <div class="toggle-btn">
                     <label class="switch">
                         <input type="checkbox">
                         <span class="slider" onclick="backgroundColour()"></span>
                     </label>
                 </div>
-                <div class="column">
+                </div>
+                <div class="button-items">
                     <p>
                         <select name="font_menu">
                             <option value="select">- Select Title Font -</option>
@@ -57,11 +59,9 @@
                         </select>
                     </p>
                 </div>
-                <div class="column">
-                    <button onclick="renderItem()">Change Background</button>
+                <div class="button-items">
+                    <button id="changeBackground" onclick="renderItem()">Change Background</button>
                 </div>
-                </div>
-            </div>
         </div>
         <!-- NEW ROW -->
         <footer>
