@@ -31,23 +31,20 @@ fetchJSON('https://api.paperquotes.com/apiv1/quotes/?tags=motivation', displayQu
 const numItemsToGenerate = 1;
 
 function renderItem() {
-  fetch(`https://source.unsplash.com/1600x900/?minimal`, {
+  fetch(`https://source.unsplash.com/1900x1100/?minimal`, {
       headers: {
         Authorization: "Client-ID 3dG7ZdUYykMRP-stnsf0e6smaF9HO9VmYIWBAdbqXuM"
       }
     })
     .
   then((response) => {
-    let item = document.createElement('div');
-    item.classList.add('item');
-    item.innerHTML = `
-      <img class="beach-image" src="${response.url}" alt="beach image"/>
-    `
-    document.body.appendChild(item);
+    let background = document.getElementById("background").style.backgroundImage = `url(${response.url})`;
+    // item.classList.add('item');
+    // item.innerHTML = `
+    //   <img class="beach-image" src="${response.url}" alt="beach image"/>
+    // `
+    // document.body.appendChild(item);
   })
-}
-for (let i = 0; i < numItemsToGenerate; i++) {
-  renderItem();
 }
 
 
@@ -69,11 +66,6 @@ for (let i = 0; i < numItemsToGenerate; i++) {
 // }
 // fetchBackgroundJSON();
 
-
-
-function displayImages(backgroundImage) {
-  document.getElementById("body").style.backgroundImage = ``
-}
 
 
 //this function is going to give the users the option to change the background color
