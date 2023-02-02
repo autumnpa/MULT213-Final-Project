@@ -1,24 +1,26 @@
+let html = "";
 
-const quotes = document.getElementById("quote");
+// Try to get object out of data so it can be displayed
 
+// Functions are fine - dont alter too much right now!!!!
 function fetchJSON(url, callback) {
   // Fetches data from quote API - We had to generate an authorization key in order to use this as well.
   fetch('https://api.paperquotes.com/apiv1/quotes/?tags=motivation', { headers: { Authorization: "Token 06c446dfd2ab6605cba53a1ca7d52c789681ad55" } })
     .then(response => response.json())
     .then(data => {
-      callback(data);
+      callback(data.results[0].quote);
     })
     .catch(error => console.error('Error:', error))
 }
 
-function displayData(data) {
+function displayQuote(individualQuote) {
   let html = "";
-  html += `<p>${data}</p>`
-  const quote = document.getElementById("quote");
-  quote.innerHTML += html;
-  console.log(data);
+  html += `<p>${individualQuote}</p>`
+  const quoteArea = document.getElementById("quoteArea");
+  quoteArea.innerHTML += html;
+  console.log(individualQuote);
 }
-fetchJSON('https://api.paperquotes.c// om/apiv1/quotes/?tags=motivation', displayData);
+fetchJSON('https://api.paperquotes.com/apiv1/quotes/?tags=motivation', displayQuote);
 
 //this function is going to give the users the option to change the background color
 function backgroundColour(){
