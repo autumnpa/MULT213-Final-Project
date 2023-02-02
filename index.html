@@ -1,14 +1,14 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" id="background">
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Final Project - A & M</title>
     <script src="scripts/script.js"></script>
     <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/autumn.css">
     <!-- Typekit stylesheet is for my custom font on autumn/light theme -->
     <link rel="stylesheet" href="https://use.typekit.net/jni8zvq.css">
+    <link id="pageStyle" rel="stylesheet" href="styles/autumn.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Clicker+Script&family=Manrope&display=swap" rel="stylesheet">
@@ -19,7 +19,8 @@
 <body>
     <div class="container">
         <header>
-            <h1>Affirmations</h1>
+            <h1 id="title">Affirmations</h1>
+
         </header>
 
         <div class="row">
@@ -41,17 +42,29 @@
             <!-- NEW ROW -->
             <div class="row-buttons">
                 <!-- Row that holds buttons -->
+                <div class="column">
                 <div class="toggle-btn">
                     <label class="switch">
                         <input type="checkbox">
                         <span class="slider" onclick="backgroundColour()"></span>
                     </label>
                 </div>
-
+                <div class="column">
+                    <p>
+                        <select name="font_menu">
+                            <option value="select">- Select Title Font -</option>
+                            <option value="Font1" onclick="fontChange1()">Font 1</option>
+                            <option value="Font2" onclick="fontChange2()">Font 2</option>
+                            <option value="Font3" onclick="fontChange3()">Font 3</option>
+                        </select>
+                    </p>
+                </div>
+                <div class="column">
+                    <button onclick="renderItem()">Change Background</button>
+                </div>
+                </div>
             </div>
         </div>
-
-
         <!-- NEW ROW -->
         <footer>
             <!-- row that holds footer info -->
