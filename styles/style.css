@@ -52,6 +52,7 @@ h1 {
     flex-wrap: wrap;
     width: 100%;
 }
+.item
 
 .column {
     display: flex;
@@ -128,6 +129,10 @@ p {
 
 .popup-btns button:active {
     background-color: rgb(235, 217, 217);
+}
+
+.row-buttons{
+
 }
 
 /* Custom theme buttons */
