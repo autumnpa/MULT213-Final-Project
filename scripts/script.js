@@ -21,3 +21,8 @@ function displayQuote(individualQuote) {
   console.log(individualQuote);
 }
 fetchJSON('https://api.paperquotes.com/apiv1/quotes/?tags=motivation', displayQuote);
+
+//this function is going to give the users the option to change the background color
+function backgroundColour(){
+  document.body.style.backgroundColor = "red";
+}
