@@ -39,27 +39,9 @@ function renderItem() {
     .
   then((response) => {
     let background = document.getElementById("background").style.backgroundImage = `url(${response.url})`;
-    // item.classList.add('item');
-    // item.innerHTML = `
-    //   <img class="beach-image" src="${response.url}" alt="beach image"/>
-    // `
-    // document.body.appendChild(item);
   })
 
-// function fetchBackgroundJSON() {
-//   fetch('https://api.unsplash.com/photos/random/?client_id=3dG7ZdUYykMRP-stnsf0e6smaF9HO9VmYIWBAdbqXuM', {
-//       headers: {
-//         Authorization: "Client-ID 3dG7ZdUYykMRP-stnsf0e6smaF9HO9VmYIWBAdbqXuM"
-//       }
-//     })
-//     .then(response => response.json())
-//     .then(data => { console.log(data)
-
-//     })
-//     .catch(imgError => console.error('Error:', imgError))
-// }
-// fetchBackgroundJSON();
-
+}
 
 
 //this function is going to give the users the option to change the background color
