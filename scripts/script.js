@@ -6,10 +6,10 @@ let html = "";
 function fetchJSON(url, callback) {
   // Fetches data from quote API - We had to generate an authorization key in order to use this as well.
   fetch('https://api.paperquotes.com/apiv1/quotes/?tags=motivation', {
-      headers: {
-        Authorization: "Token 06c446dfd2ab6605cba53a1ca7d52c789681ad55"
-      }
-    })
+    headers: {
+      Authorization: "Token 06c446dfd2ab6605cba53a1ca7d52c789681ad55"
+    }
+  })
     .then(response => response.json())
     .then(data => {
       callback(data.results[0].quote);
@@ -32,19 +32,19 @@ const numItemsToGenerate = 1;
 
 function renderItem() {
   fetch(`https://source.unsplash.com/1600x900/?minimal`, {
-      headers: {
-        Authorization: "Client-ID 3dG7ZdUYykMRP-stnsf0e6smaF9HO9VmYIWBAdbqXuM"
-      }
-    })
+    headers: {
+      Authorization: "Client-ID 3dG7ZdUYykMRP-stnsf0e6smaF9HO9VmYIWBAdbqXuM"
+    }
+  })
     .
-  then((response) => {
-    let item = document.createElement('div');
-    item.classList.add('item');
-    item.innerHTML = `
+    then((response) => {
+      let item = document.createElement('div');
+      item.classList.add('item');
+      item.innerHTML = `
       <img class="beach-image" src="${response.url}" alt="beach image"/>
     `
-    document.body.appendChild(item);
-  })
+      document.body.appendChild(item);
+    })
 }
 for (let i = 0; i < numItemsToGenerate; i++) {
   renderItem();
@@ -79,6 +79,8 @@ function displayImages(backgroundImage) {
 //this function is going to give the users the option to change the background color
 function backgroundColour() {
   document.body.style.backgroundColor = "red";
+  document.getElementById('pageStyle').setAttribute("href", "styles/mikayla.css");
+
 }
 
 function fontChange1() {
