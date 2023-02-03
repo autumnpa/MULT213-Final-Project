@@ -24,10 +24,17 @@ function displayQuote(individualQuote) {
   let html = "";
   html += `<p>${individualQuote}</p>`
   const quoteArea = document.getElementById("quoteArea");
-  quoteArea.innerHTML += html;
+  quoteArea.innerHTML = html;
   console.log(individualQuote);
 }
-fetchJSON('https://api.paperquotes.com/apiv1/quotes/?tags=motivation', displayQuote);
+function updateQuote() {
+  fetchJSON('https://api.paperquotes.com/apiv1/quotes/?tags=motivation', displayQuote);
+}
+document.addEventListener("DOMContentLoaded", () => {
+  updateQuote();
+})
+
+
 
 //this function will be used to get access to the unsplash image API
 
@@ -35,7 +42,7 @@ const numItemsToGenerate = 1;
 
 function renderItem() {
   // change to loading
-  document.getElementById("changeBackground").innerHTML="Loading...";
+  document.getElementById("changeBackground").innerHTML = "Loading...";
   fetch(`https://source.unsplash.com/1900x1100/?minimal`, {
     headers: {
       Authorization: "Client-ID 3dG7ZdUYykMRP-stnsf0e6smaF9HO9VmYIWBAdbqXuM"
@@ -50,7 +57,7 @@ function renderItem() {
         background.style.backgroundImage = `url(${src})`;
         // change back to normal
       });
-      document.getElementById("changeBackground").innerHTML="Change Background";
+      document.getElementById("changeBackground").innerHTML = "Change Background";
       image.src = src;
 
       background.style.backgroundImage = `url(${response.url})`;
