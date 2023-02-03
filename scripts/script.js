@@ -4,6 +4,9 @@ let html = "";
 
 // Functions are fine - dont alter too much right now!!!!
 function fetchJSON(url, callback) {
+  // This randomizes the quote being diaplyed on the screen
+  // The API gives us back 5 quotes that we can filter through
+  const random = Math.floor(Math.random() * 5 + 1);
   // Fetches data from quote API - We had to generate an authorization key in order to use this as well.
   fetch('https://api.paperquotes.com/apiv1/quotes/?tags=motivation', {
     headers: {
@@ -12,7 +15,7 @@ function fetchJSON(url, callback) {
   })
     .then(response => response.json())
     .then(data => {
-      callback(data.results[0].quote);
+      callback(data.results[random].quote);
     })
     .catch(error => console.error('Error:', error))
 }
@@ -52,6 +55,7 @@ function renderItem() {
 
 // }
 
+// This function swaps our style sheets by injecting the opposite stylehseet into the id of swapStyle when the checkbox is checked/unchecked
 function swapStyleSheet() {
   if (document.getElementById("swapStyle").checked) {
     document.getElementById("pageStyle").setAttribute('href', 'styles/mikayla.css');
