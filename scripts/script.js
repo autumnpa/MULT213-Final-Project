@@ -47,12 +47,13 @@ function renderItem() {
       let image = new Image();
       image.addEventListener('load', function () {
         background.style.backgroundImage = src;
+        document.style.cursor = "progress";
       });
       image.src = src;
 
       background.style.backgroundImage = `url(${response.url})`;
     })
-
+    .catch(error => console.error('Error:', error))
 }
 
 // This function swaps our style sheets by injecting the opposite stylehseet into the id of swapStyle when the checkbox is checked/unchecked
