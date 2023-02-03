@@ -8,10 +8,8 @@
     <!-- <link rel="stylesheet" href="styles/style.css"> -->
     <link rel="stylesheet" href="styles/mikayla.css">
     <!-- <link id="pageStyle" rel="stylesheet" href="styles/autumn.css"> -->
-    <link rel="stylesheet" href="styles/style.css">
     <!-- Typekit stylesheet is for my custom font on autumn/light theme -->
     <link rel="stylesheet" href="https://use.typekit.net/jni8zvq.css">
-    <link id="pageStyle" rel="stylesheet" href="styles/autumn.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Clicker+Script&family=Manrope&display=swap" rel="stylesheet">
@@ -57,16 +55,17 @@
             </div>
             <div class="button-items">
                 <p>
-                    <select name="font_menu">
-                        <option value="select">- Select Title Font -</option>
-                        <option value="Font1" onclick="fontChange1()">Font 1</option>
-                        <option value="Font2" onclick="fontChange2()">Font 2</option>
-                        <option value="Font3" onclick="fontChange3()">Font 3</option>
+
+                    <select class="font-menu" name="font_menu">
+                        <option value="select" onclick="defaultFont()">- Select Title Font -</option>
+                        <option class="font1" value="Font1" onclick="fontChange1()">Blenny</option>
+                        <option value="Font2" onclick="fontChange2()">Broadacre</option>
+                        <option value="Font3" onclick="fontChange3()">Juniper</option>
                     </select>
                 </p>
             </div>
             <div class="button-items">
-                <button id="changeBackground" onclick="renderItem()">Change Background</button>
+                <button class="button-50" id="changeBackground" onclick="renderItem()">Change Background</button>
             </div>
         </div>
         <!-- NEW ROW -->
