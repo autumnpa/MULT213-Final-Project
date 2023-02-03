@@ -75,13 +75,17 @@ h1 {
 /* Text/font styling */
 h3 {
     font-size: 1.5rem;
-    margin-bottom: 12px;
-    font-weight: 650;
+    text-decoration: none;
+    font-family: "sirenia", sans-serif;
+    font-weight: 500;
+    font-style: normal;
 }
 
 p {
-    font-size: 16px;
-    font-weight: 350;
+    font-size: 1rem;
+    font-family: "ofelia-display", sans-serif;
+    font-weight: 300;
+    font-style: normal;
 }
 
 h3,
@@ -93,10 +97,12 @@ p {
 /* Button styling */
 .popup-btns button {
     background-color: #DEEAE8;
-    font-size: 16px;
-    font-weight: 500;
+    font-size: 1rem;
+    font-family: "sirenia", sans-serif;
+    font-weight: 300;
+    font-style: normal;
     text-transform: uppercase;
-    outline: none;
+    /* Removes the default border around the full button */
     border: none;
     border-top: 1px solid #d0dad8;
     border-left: 1px solid #d0dad8;
