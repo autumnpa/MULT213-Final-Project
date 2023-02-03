@@ -155,7 +155,6 @@ p {
     background-color: rgb(235, 217, 217);
 }
 
-
 /* Custom theme buttons */
 /* The switch - the box around the slider */
 .switch {
@@ -272,7 +271,7 @@ input:checked+.slider::after {
     line-height: 20px;
     margin: 0 5px 10px 0;
     overflow: visible;
-    padding: 9px 18px;
+    padding: 13px 30px;
     text-align: center;
     text-transform: none;
     touch-action: manipulation;
@@ -326,6 +325,6 @@ input:checked+.slider::after {
     white-space: nowrap;
 }
 
-select.button-50{
+select.font-menu {
     width: 200px;
 }
