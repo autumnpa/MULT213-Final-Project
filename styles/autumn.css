@@ -1,12 +1,20 @@
 /* Stylesheet for Autumn theme */
 /* Main stylesheet for this project */
 
-body {
-    /* background image with default colour of white incase image doesn't load */
-    background: url('../assets/light-bg-sml.png') white;
-    background-repeat: no-repeat;
-    background-size: cover;
+html {
+    min-width: 250px;
+    background-attachment: inherit;
+    background-image: url(../assets/light-bg-sml.png);
+}
 
+body {
+    max-width: 500px;
+    margin-right: auto;
+    margin-left: auto;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 header {
