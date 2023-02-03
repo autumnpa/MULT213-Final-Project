@@ -32,23 +32,32 @@ const numItemsToGenerate = 1;
 
 function renderItem() {
   fetch(`https://source.unsplash.com/1900x1100/?minimal`, {
-      headers: {
-        Authorization: "Client-ID 3dG7ZdUYykMRP-stnsf0e6smaF9HO9VmYIWBAdbqXuM"
-      }
-    })
-    .
-  then((response) => {
-    let background = document.getElementById("background").style.backgroundImage = `url(${response.url})`;
+    headers: {
+      Authorization: "Client-ID 3dG7ZdUYykMRP-stnsf0e6smaF9HO9VmYIWBAdbqXuM"
+    }
   })
+    .
+    then((response) => {
+      let background = document.getElementById("background").style.backgroundImage = `url(${response.url})`;
+    })
 
 }
 
 
 //this function is going to give the users the option to change the background color
-function backgroundColour() {
-  document.body.style.backgroundColor = "red";
-  document.getElementById('pageStyle').setAttribute("href", "styles/mikayla.css");
+// changing this function to togglen between our custom themes
+// function backgroundColour() {
+//   document.body.style.backgroundColor = "red";
+//   document.getElementById('pageStyle').setAttribute("href", "styles/mikayla.css");
 
+// }
+
+function swapStyleSheet() {
+  if (document.getElementById("swapStyle").checked) {
+    document.getElementById("pageStyle").setAttribute('href', 'autumn.css');
+  } else {
+    document.getElementById("pageStyle").setAttribute('href', "mikayla.css");
+  }
 }
 
 function fontChange1() {

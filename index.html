@@ -50,24 +50,24 @@
             <div class="button-items">
                 <div class="toggle-btn">
                     <label class="switch">
-                        <input type="checkbox">
+                        <input onclick="swapStyleSheet()" id="swapStyle" type="checkbox" name="swapStyle">
                         <span class="slider" onclick="backgroundColour()"></span>
                     </label>
                 </div>
-                </div>
-                <div class="button-items">
-                    <p>
-                        <select name="font_menu">
-                            <option value="select">- Select Title Font -</option>
-                            <option value="Font1" onclick="fontChange1()">Font 1</option>
-                            <option value="Font2" onclick="fontChange2()">Font 2</option>
-                            <option value="Font3" onclick="fontChange3()">Font 3</option>
-                        </select>
-                    </p>
-                </div>
-                <div class="button-items">
-                    <button id="changeBackground" onclick="renderItem()">Change Background</button>
-                </div>
+            </div>
+            <div class="button-items">
+                <p>
+                    <select name="font_menu">
+                        <option value="select">- Select Title Font -</option>
+                        <option value="Font1" onclick="fontChange1()">Font 1</option>
+                        <option value="Font2" onclick="fontChange2()">Font 2</option>
+                        <option value="Font3" onclick="fontChange3()">Font 3</option>
+                    </select>
+                </p>
+            </div>
+            <div class="button-items">
+                <button id="changeBackground" onclick="renderItem()">Change Background</button>
+            </div>
         </div>
         <!-- NEW ROW -->
         <footer>
