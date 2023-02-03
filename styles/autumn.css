@@ -4,7 +4,9 @@
 html {
     min-width: 250px;
     background-attachment: inherit;
-    background-image: url(../assets/light-bg-sml.png);
+    background-image: url(../assets/autumn-bg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 body {
@@ -15,6 +17,16 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.item img {
+    width: 100vw;
+    height: 100vh;
+    position: static
+}
+
+#changeBackground {
+    width: 200px;
 }
 
 header {
