@@ -34,7 +34,8 @@ fetchJSON('https://api.paperquotes.com/apiv1/quotes/?tags=motivation', displayQu
 const numItemsToGenerate = 1;
 
 function renderItem() {
-  document.body.style.cursor = "progress";
+  // change to loading
+  document.getElementById("changeBackground").innerHTML="Loading...";
   fetch(`https://source.unsplash.com/1900x1100/?minimal`, {
     headers: {
       Authorization: "Client-ID 3dG7ZdUYykMRP-stnsf0e6smaF9HO9VmYIWBAdbqXuM"
@@ -42,17 +43,19 @@ function renderItem() {
   })
     .
     then((response) => {
-      let background = document.getElementById("background")
-      let src = `url(${response.url}`;
+      let background = document.getElementById("background");
+      let src = `(${response.url}`;
       let image = new Image();
       image.addEventListener('load', function () {
-        background.style.backgroundImage = src;
+        background.style.backgroundImage = `url(${src})`;
+        // change back to normal
       });
+      document.getElementById("changeBackground").innerHTML="Change Background";
       image.src = src;
 
       background.style.backgroundImage = `url(${response.url})`;
     })
-
+    .catch(error => console.error('Error:', error))
 }
 
 // This function swaps our style sheets by injecting the opposite stylehseet into the id of swapStyle when the checkbox is checked/unchecked
