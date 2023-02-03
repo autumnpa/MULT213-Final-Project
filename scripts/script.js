@@ -44,10 +44,10 @@ function renderItem() {
     .
     then((response) => {
       let background = document.getElementById("background");
-      let src = `url(${response.url}`;
+      let src = `(${response.url}`;
       let image = new Image();
       image.addEventListener('load', function () {
-        background.style.backgroundImage = src;
+        background.style.backgroundImage = `url(${src})`;
         // change back to normal
       });
       document.getElementById("changeBackground").innerHTML="Change Background";
