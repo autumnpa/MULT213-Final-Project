@@ -9,23 +9,23 @@ function fetchJSON(url, callback) {
   const random = Math.floor(Math.random() * 9 + 1);
   // Fetches data from quote API - We had to generate an authorization key in order to use this as well.
   fetch(`https://api.paperquotes.com/apiv1/quotes/?tags=motivation&random=${random}`, {
-    headers: {
-      Authorization: "Token 06c446dfd2ab6605cba53a1ca7d52c789681ad55"
-    }
-  })
+      headers: {
+        Authorization: "Token 06c446dfd2ab6605cba53a1ca7d52c789681ad55"
+      }
+    })
     .then(response => response.json())
     .then(data => {
-      console.log(data) 
+      console.log(data)
       if (data.results) {
         callback(data.results[random].quote);
-      }
-      else{
+      } else {
         callback("Failed to load quote. Please try again later.")
       }
     })
     .catch(error => {
       callback("Failed to load quote. Please try again later.")
-      console.error('Error:', error)})
+      console.error('Error:', error)
+    })
 }
 
 function displayQuote(individualQuote) {
@@ -35,6 +35,7 @@ function displayQuote(individualQuote) {
   quoteArea.innerHTML = html;
   console.log(individualQuote);
 }
+
 function updateQuote() {
   fetchJSON('https://api.paperquotes.com/apiv1/quotes/?tags=motivation', displayQuote);
 }
@@ -52,12 +53,12 @@ function renderItem() {
   // change to loading
   document.getElementById("changeBackground").innerHTML = "Loading...";
   fetch(`https://source.unsplash.com/1900x1100/?minimal`, {
-    headers: {
-      Authorization: "Client-ID 3dG7ZdUYykMRP-stnsf0e6smaF9HO9VmYIWBAdbqXuM"
-    }
-  })
+      headers: {
+        Authorization: "Client-ID 3dG7ZdUYykMRP-stnsf0e6smaF9HO9VmYIWBAdbqXuM"
+      }
+    })
     .
-    then((response) => {
+  then((response) => {
       let background = document.getElementById("background");
       let src = `(${response.url}`;
       let image = new Image();
@@ -72,7 +73,8 @@ function renderItem() {
     })
     .catch(error => {
       document.getElementById("changeBackground").innerHTML = "Change Background";
-      console.error('Error:', error)})
+      console.error('Error:', error)
+    })
 }
 
 // This function swaps our style sheets by injecting the opposite stylehseet into the id of swapStyle when the checkbox is checked/unchecked
