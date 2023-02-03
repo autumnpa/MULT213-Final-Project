@@ -126,11 +126,10 @@ p {
     /* Removes the default border around the full button */
     border: none;
     border-top: 1px solid #d0dad8;
-    border-left: 1px solid #d0dad8;
     padding: 20px 16px;
     cursor: pointer;
     float: left;
-    width: 50%;
+    width: 100%;
 }
 
 .popup-btns button:not(:last-child) {
