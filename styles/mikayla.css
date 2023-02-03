@@ -1,6 +1,8 @@
 /* Stylesheet for Mikayla theme */
 html {
     min-width: 250px;
+    background-attachment: inherit;
+    background-image: url(../assets/mikayla-background.svg);
 }
 
 body {
@@ -11,7 +13,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 header {
@@ -58,8 +59,31 @@ footer {
 
 /* Card styling */
 .popup-card {
-    border-radius: 1rem;
-    background-color: rgb(197, 199, 201);
+    background-color: #000;
+    background-image: none;
+    border: 1px solid #000;
+    border-radius: 4px;
+    box-shadow: #fff 4px 4px 0 0, #000 4px 4px 0 1px;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: ITCAvantGardeStd-Bk, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    margin: 0 5px 10px 0;
+    overflow: visible;
+    padding: 9px 18px;
+    text-align: center;
+    text-transform: none;
+    opacity: 90%;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+
 }
 
 .popup-info {
@@ -69,23 +93,30 @@ footer {
 
 /* Text/font styling */
 h1 {
-    font-family: 'Clicker Script', cursive;
-    font-size: 5rem;
-    letter-spacing: -1.5px;
+    font-family: quirkwood-regular, sans-serif;
+    font-size: 7rem;
+    letter-spacing: 3px;
     margin: 10px;
 }
 
 h3 {
-    font-size: 20px;
+    font-size: 24px;
     margin-bottom: 12px;
     font-weight: 650;
     text-decoration: underline;
+    font-family: 'hobeaux', sans-serif;
+    font-weight: 700;
+    font-style: bold;
+    text-transform: uppercase;
 }
 
+
 p {
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 350;
-    font-family: 'Manrope', sans-serif;
+    font-family: 'hobeaux', sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 h3,
@@ -96,13 +127,16 @@ p {
 
 /* Button styling */
 .popup-btns button {
+    font-family: 'hobeaux', sans-serif;
+    font-weight: 700;
+    font-style: bold;
+    text-transform: uppercase;
     background-color: white;
     font-size: 16px;
-    font-weight: 500;
     text-transform: uppercase;
     outline: none;
     border: 1px solid rgb(197, 199, 201);
-    /* border-left: 1px solid rgb(197, 199, 201); */
+    border-left: 1px solid rgb(197, 199, 201);
     padding: 20px 16px;
     cursor: pointer;
     float: left;
@@ -114,7 +148,7 @@ p {
 }
 
 .popup-btns button:hover {
-    background-color: rgb(240, 224, 224);
+    background-color: #FE7C21;
 }
 
 .popup-btns button:active {
@@ -217,4 +251,78 @@ input:checked+.slider::after {
 
 #changeBackground {
     width: 150px;
+}
+
+/* CSS */
+/* Took the button code as well as styling for other elements on the page from this site https://getcssscan.com/css-buttons-examples */
+.button-50 {
+    appearance: button;
+    background-color: #000;
+    background-image: none;
+    border: 1px solid #000;
+    border-radius: 4px;
+    box-shadow: #fff 4px 4px 0 0, #000 4px 4px 0 1px;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: ITCAvantGardeStd-Bk, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    margin: 0 5px 10px 0;
+    overflow: visible;
+    padding: 9px 18px;
+    text-align: center;
+    text-transform: none;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.button-50:focus {
+    text-decoration: none;
+}
+
+.button-50:hover {
+    text-decoration: none;
+}
+
+.button-50:active {
+    box-shadow: rgba(0, 0, 0, .125) 0 3px 5px inset;
+    outline: 0;
+}
+
+.button-50:not([disabled]):active {
+    box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
+    transform: translate(2px, 2px);
+}
+
+.font-menu {
+    background-color: #000;
+    background-image: none;
+    border: 1px solid #000;
+    border-radius: 4px;
+    box-shadow: #fff 4px 4px 0 0, #000 4px 4px 0 1px;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: ITCAvantGardeStd-Bk, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    margin: 0 5px 10px 0;
+    overflow: visible;
+    padding: 13px 30px;
+    text-align: center;
+    text-transform: none;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+
 }
