@@ -19,6 +19,10 @@ body {
     justify-content: center;
 }
 
+/* Changes our portfolio links colour */
+a {
+    color: #6b7476;
+}
 
 .item img {
     width: 100vw;
