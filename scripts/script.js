@@ -6,18 +6,26 @@ let html = "";
 function fetchJSON(url, callback) {
   // This randomizes the quote being diaplyed on the screen
   // The API gives us back 5 quotes that we can filter through
-  const random = Math.floor(Math.random() * 5 + 1);
+  const random = Math.floor(Math.random() * 9 + 1);
   // Fetches data from quote API - We had to generate an authorization key in order to use this as well.
-  fetch('https://api.paperquotes.com/apiv1/quotes/?tags=motivation', {
+  fetch(`https://api.paperquotes.com/apiv1/quotes/?tags=motivation&random=${random}`, {
     headers: {
       Authorization: "Token 06c446dfd2ab6605cba53a1ca7d52c789681ad55"
     }
   })
     .then(response => response.json())
     .then(data => {
-      callback(data.results[random].quote);
+      console.log(data) 
+      if (data.results) {
+        callback(data.results[random].quote);
+      }
+      else{
+        callback("Failed to load quote. Please try again later.")
+      }
     })
-    .catch(error => console.error('Error:', error))
+    .catch(error => {
+      callback("Failed to load quote. Please try again later.")
+      console.error('Error:', error)})
 }
 
 function displayQuote(individualQuote) {
@@ -62,7 +70,9 @@ function renderItem() {
 
       background.style.backgroundImage = `url(${response.url})`;
     })
-    .catch(error => console.error('Error:', error))
+    .catch(error => {
+      document.getElementById("changeBackground").innerHTML = "Change Background";
+      console.error('Error:', error)})
 }
 
 // This function swaps our style sheets by injecting the opposite stylehseet into the id of swapStyle when the checkbox is checked/unchecked
@@ -76,17 +86,17 @@ function swapStyleSheet() {
 }
 
 function defaultFont() {
-  document.getElementById("title").style.fontFamily = "como", sans - serif;
+  document.getElementById("title").style.fontFamily = "como";
 }
 
 function fontChange1() {
-  document.getElementById("title").style.fontFamily = "blenny", sans - serif;
+  document.getElementById("title").style.fontFamily = "blenny";
 }
 
 function fontChange2() {
-  document.getElementById("title").style.fontFamily = "broadacre-hairline-4", sans - serif;
+  document.getElementById("title").style.fontFamily = "broadacre-hairline-4";
 }
 
 function fontChange3() {
-  document.getElementById("title").style.fontFamily = "juniper-std", sans - serif;
+  document.getElementById("title").style.fontFamily = "juniper-std";
 }
