@@ -250,7 +250,7 @@ input:checked+.slider::after {
 }
 
 #changeBackground {
-    width: 150px;
+    width: 200px;
 }
 
 /* CSS */
@@ -324,5 +324,8 @@ input:checked+.slider::after {
     -webkit-user-select: none;
     vertical-align: middle;
     white-space: nowrap;
+}
 
+select.button-50{
+    width: 200px;
 }
