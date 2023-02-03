@@ -6,10 +6,10 @@ let html = "";
 function fetchJSON(url, callback) {
   // Fetches data from quote API - We had to generate an authorization key in order to use this as well.
   fetch('https://api.paperquotes.com/apiv1/quotes/?tags=motivation', {
-    headers: {
-      Authorization: "Token 06c446dfd2ab6605cba53a1ca7d52c789681ad55"
-    }
-  })
+      headers: {
+        Authorization: "Token 06c446dfd2ab6605cba53a1ca7d52c789681ad55"
+      }
+    })
     .then(response => response.json())
     .then(data => {
       callback(data.results[0].quote);
@@ -51,14 +51,18 @@ function backgroundColour() {
 
 }
 
+function defaultFont() {
+  document.getElementById("title").style.fontFamily = "como", sans-serif;
+}
+
 function fontChange1() {
-  document.getElementById("title").style.fontFamily = "Impact, Charcoal, sans-serif";
+  document.getElementById("title").style.fontFamily = "blenny", sans - serif;
 }
 
 function fontChange2() {
-  document.getElementById("title").style.fontFamily = "Charcoal, sans-serif";
+  document.getElementById("title").style.fontFamily = "broadacre-hairline-4", sans - serif;
 }
 
 function fontChange3() {
-  document.getElementById("title").style.fontFamily = "Lucida Sans, Lucida Sans Regular, Lucida Grande, Lucida Sans Unicode, Geneva, Verdana, sans-serif";
+  document.getElementById("title").style.fontFamily = "juniper-std", sans - serif;
 }
