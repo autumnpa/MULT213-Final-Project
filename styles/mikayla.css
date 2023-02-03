@@ -328,3 +328,7 @@ input:checked+.slider::after {
 select.font-menu {
     width: 200px;
 }
+
+a{
+    color: black;
+}
