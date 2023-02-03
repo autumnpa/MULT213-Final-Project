@@ -61,30 +61,27 @@ h1 {
 /* Card styling */
 .popup-card {
     border-radius: 1rem;
-    background-color: rgb(197, 199, 201);
+    background-color: #DEEAE8;
+    opacity: 90%;
+    /* Rounds the bottoms of the popup buttons */
+    overflow: hidden;
 }
 
 .popup-info {
     padding: 40px 40px 30px 40px;
-    /* border-color: #000000;
-    border-style: solid;
-    border-radius: 1rem; */
-
 }
 
 
 /* Text/font styling */
 h3 {
-    font-size: 20px;
+    font-size: 1.5rem;
     margin-bottom: 12px;
     font-weight: 650;
-    text-decoration: underline;
 }
 
 p {
     font-size: 16px;
     font-weight: 350;
-    font-family: 'Manrope', sans-serif;
 }
 
 h3,
@@ -95,13 +92,14 @@ p {
 
 /* Button styling */
 .popup-btns button {
-    background-color: white;
+    background-color: #DEEAE8;
     font-size: 16px;
     font-weight: 500;
     text-transform: uppercase;
     outline: none;
-    border: 1px solid rgb(197, 199, 201);
-    /* border-left: 1px solid rgb(197, 199, 201); */
+    border: none;
+    border-top: 1px solid #d0dad8;
+    border-left: 1px solid #d0dad8;
     padding: 20px 16px;
     cursor: pointer;
     float: left;
@@ -113,11 +111,11 @@ p {
 }
 
 .popup-btns button:hover {
-    background-color: rgb(240, 224, 224);
+    background-color: #e7f3f1;
 }
 
 .popup-btns button:active {
-    background-color: rgb(235, 217, 217);
+    background-color: #DEEAE8;
 }
 
 /* Custom theme buttons */
