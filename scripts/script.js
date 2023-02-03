@@ -31,17 +31,30 @@ fetchJSON('https://api.paperquotes.com/apiv1/quotes/?tags=motivation', displayQu
 const numItemsToGenerate = 1;
 
 function renderItem() {
+  document.body.style.cursor = "progress";
   fetch(`https://source.unsplash.com/1900x1100/?minimal`, {
-    headers: {
-      Authorization: "Client-ID 3dG7ZdUYykMRP-stnsf0e6smaF9HO9VmYIWBAdbqXuM"
-    }
-  })
-    .
-    then((response) => {
-      let background = document.getElementById("background").style.backgroundImage = `url(${response.url})`;
+      headers: {
+        Authorization: "Client-ID 3dG7ZdUYykMRP-stnsf0e6smaF9HO9VmYIWBAdbqXuM"
+      }
     })
+    .
+  then((response) => {
+    let background = document.getElementById("background")
+    let src = `url(${response.url}`;
+    let image = new Image();
+    image.addEventListener('load', function () {
+      background.style.backgroundImage = src;
+    });
+    image.src = src;
+
+    background.style.backgroundImage = `url(${response.url})`;
+  })
 
 }
+
+
+
+
 
 
 //this function is going to give the users the option to change the background color
@@ -53,6 +66,7 @@ function renderItem() {
 // }
 
 function swapStyleSheet() {
+  document.getElementById("background").style.backgroundImage = "";
   if (document.getElementById("swapStyle").checked) {
     document.getElementById("pageStyle").setAttribute('href', 'styles/mikayla.css');
   } else {
