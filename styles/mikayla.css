@@ -106,7 +106,6 @@ h3 {
     text-decoration: underline;
     font-family: 'hobeaux', sans-serif;
     font-weight: 700;
-    font-style: bold;
     text-transform: uppercase;
 }
 
@@ -129,7 +128,6 @@ p {
 .popup-btns button {
     font-family: 'hobeaux', sans-serif;
     font-weight: 700;
-    font-style: bold;
     text-transform: uppercase;
     background-color: white;
     font-size: 16px;
